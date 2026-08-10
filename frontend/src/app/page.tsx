@@ -1,6 +1,8 @@
 import { ApiDemoForm } from "@/components/api-demo-form";
 import { apiBaseUrl } from "@/lib/api";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const statusItems = [
   "Next.js App Router",
   "Static export for GitHub Pages",
@@ -29,7 +31,7 @@ export default function HomePage() {
           <div className="hero-media">
             <img
               className="hero-image"
-              src="/jerry.jpg"
+              src={`${basePath}/jerry.jpg`}
               alt="Jerry"
             />
             <div className="hero-caption">

@@ -41,6 +41,8 @@ jobs:
       - name: Build Next.js static site
         env:
           NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
+          GITHUB_PAGES_REPO_NAME: ${{ github.event.repository.name }}
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
         run: npm run build
 
       - name: Prepare artifact name

@@ -1,14 +1,18 @@
 /** @type {import('next').NextConfig} */
 const isProduction = process.env.NODE_ENV === "production";
-const repoName = process.env.GITHUB_PAGES_REPO_NAME;
+const repoName =
+  process.env.GITHUB_PAGES_REPO_NAME ||
+  process.env.GITHUB_REPOSITORY?.split("/")[1] ||
+  "";
+const basePath = isProduction && repoName ? `/${repoName}` : "";
 
 const nextConfig = {
   output: "export",
   images: {
     unoptimized: true,
   },
-  basePath: isProduction && repoName ? `/${repoName}` : "",
+  basePath,
+  assetPrefix: basePath,
 };
 
 module.exports = nextConfig;
-

@@ -1,0 +1,44 @@
+name: Backend CI/CD - FastAPI Test & Deploy
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "backend/**"
+      - ".github/workflows/backend-cicd.yml"
+
+jobs:
+  test:
+    name: Run Pytest Suite
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backend
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest httpx
+
+      - name: Run tests
+        run: pytest
+
+  deploy:
+    name: Trigger Deployment
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger service webhook
+        run: |
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
+

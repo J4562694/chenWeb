@@ -26,6 +26,17 @@ export default function HomePage() {
               </span>
             ))}
           </div>
+          <div className="hero-media">
+            <img
+              className="hero-image"
+              src="/jerry.jpg"
+              alt="Jerry"
+            />
+            <div className="hero-caption">
+              <strong>專案圖片已接入首頁</strong>
+              <p>目前使用專案根目錄提供的 `jerry.jpg`，並以靜態資源方式輸出到頁面。</p>
+            </div>
+          </div>
         </section>
 
         <section className="panel-wrap">
@@ -51,4 +62,3 @@ export default function HomePage() {
     </main>
   );
 }
-

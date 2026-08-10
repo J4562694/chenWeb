@@ -1,14 +1,14 @@
 :root {
-  color-scheme: light;
-  --bg: #f6f2eb;
-  --surface: rgba(255, 255, 255, 0.88);
-  --surface-strong: #ffffff;
-  --text: #1c1917;
-  --muted: #57534e;
-  --accent: #0f766e;
-  --accent-strong: #115e59;
-  --border: rgba(28, 25, 23, 0.12);
-  --shadow: 0 24px 60px rgba(28, 25, 23, 0.12);
+  color-scheme: dark;
+  --bg: #071116;
+  --surface: rgba(10, 20, 26, 0.82);
+  --surface-strong: #10212c;
+  --text: #edf7f8;
+  --muted: #8ba6ad;
+  --accent: #14b8a6;
+  --accent-strong: #0f8f82;
+  --border: rgba(164, 210, 216, 0.16);
+  --shadow: 0 28px 70px rgba(0, 0, 0, 0.42);
 }
 
 * {
@@ -22,8 +22,9 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(15, 118, 110, 0.16), transparent 32%),
-    radial-gradient(circle at right, rgba(245, 158, 11, 0.14), transparent 24%),
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.22), transparent 34%),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.18), transparent 28%),
+    radial-gradient(circle at bottom, rgba(251, 191, 36, 0.08), transparent 24%),
     var(--bg);
   color: var(--text);
 }
@@ -65,12 +66,37 @@ textarea {
   gap: 18px;
 }
 
+.hero-media {
+  display: grid;
+  gap: 16px;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+}
+
+.hero-caption {
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(15, 27, 35, 0.84);
+  border: 1px solid var(--border);
+}
+
+.hero-caption p {
+  margin: 8px 0 0;
+}
+
 .eyebrow {
   width: fit-content;
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(15, 118, 110, 0.1);
-  color: var(--accent-strong);
+  background: rgba(20, 184, 166, 0.12);
+  color: #7cecdf;
   font-size: 14px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -157,7 +183,13 @@ textarea {
   padding: 12px 14px;
   border-radius: 16px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(5, 15, 20, 0.88);
+  color: var(--text);
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #6e8b93;
 }
 
 .form textarea {
@@ -168,12 +200,13 @@ textarea {
 .response-box {
   border-radius: 18px;
   padding: 16px;
-  background: rgba(28, 25, 23, 0.05);
+  background: rgba(4, 11, 15, 0.88);
+  border: 1px solid var(--border);
   overflow-x: auto;
 }
 
 .status-ok {
-  color: #166534;
+  color: #5eead4;
 }
 
 .status-idle {
@@ -181,7 +214,7 @@ textarea {
 }
 
 .status-error {
-  color: #b91c1c;
+  color: #fda4af;
 }
 
 @media (max-width: 720px) {

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ChenWeb Starter",
-  description: "Next.js SSG frontend paired with a FastAPI backend.",
+  title: "ChenWeb Portfolio",
+  description: "Personal portfolio built with Next.js and deployed on GitHub Pages.",
 };
 
 export default function RootLayout({
@@ -17,4 +17,3 @@ export default function RootLayout({
     </html>
   );
 }
-

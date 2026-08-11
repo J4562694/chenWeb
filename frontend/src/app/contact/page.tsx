@@ -12,8 +12,8 @@ export default function ContactPage() {
 
         <section className="panel contact-panel">
           <div className="contact-actions">
-            <a className="link-button" href="mailto:hello@example.com">
-              hello@example.com
+            <a className="link-button" href="mailto:eertg123@gmail.com">
+              eertg123@gmail.com
             </a>
             <a
               className="ghost-link"
@@ -25,8 +25,18 @@ export default function ContactPage() {
             </a>
           </div>
           <div className="stack-list">
-            <div className="stack-item">可把這裡換成你的 Email、GitHub、LinkedIn 或 Instagram。</div>
-            <div className="stack-item">也可以再加聯絡表單、下載履歷按鈕或更多個人資訊。</div>
+            <div className="stack-item">
+              Instagram：
+              <a
+                className="inline-link"
+                href="https://instagram.com/j4562694"
+                target="_blank"
+                rel="noreferrer"
+              >
+                @j4562694
+              </a>
+            </div>
+            <div className="stack-item">有任何需要合作的事宜，歡迎直接使用email或是IG與我聯繫。</div>
           </div>
         </section>
       </div>

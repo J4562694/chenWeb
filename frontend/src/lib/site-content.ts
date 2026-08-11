@@ -13,22 +13,46 @@ export const tools = [
 
 export const featuredProjects = [
   {
-    title: "Brand Story Landing Page",
-    type: "Web Design / Frontend",
+    title: "ChenWeb Portfolio",
+    type: "Personal Website",
+    summary: "以暗色系為核心，重新整理自己的作品集與個人風格。",
     description:
-      "把產品介紹、品牌視覺與轉換流程整合成一頁式體驗，專注在節奏、層次與 CTA 的清晰度。",
+      "把個人介紹、作品展示與聯絡方式整合成一致的多頁式網站，強化品牌感與閱讀節奏。",
+    year: "2026",
+    stack: ["Next.js", "TypeScript", "CSS", "GitHub Pages"],
+    outcome: "建立可持續擴充的作品集骨架與整體視覺語言。",
+    image: `${basePath}/default-v3.png`,
+    imageAlt: "ChenWeb portfolio project preview",
   },
   {
-    title: "Interactive Dashboard Concept",
-    type: "Dashboard / UX",
+    title: "beybleadBot",
+    type: "Automation / Bot",
+    summary: "在大家都玩不到陀螺的情況下，做了一個網路上架陀螺的提醒機器人。",
     description:
-      "為資料密集型後台設計可快速掃描的資訊版面，強化狀態提示、操作優先序與行動效率。",
+      "針對熱門陀螺商品常常缺貨、補貨時間又難掌握的情況，整理出一套自動追蹤與通知流程，讓使用者能在商品重新上架時更快收到提醒。",
+    year: "2026",
+    stack: ["Bot", "Notification", "Automation"],
+    outcome: "使用telegram bot來通知使用者陀螺上架，不用再跟黃牛購買。",
+    image: `${basePath}/beybleadBot.jpg`,
+    imageAlt: "beybleadBot project preview",
+  },
+];
+
+export const supportingProjects = [
+  {
+    title: "Dashboard UI Study",
+    type: "Concept",
+    description: "練習把資料密集型畫面做得更容易掃描，提升資訊分層與狀態辨識。",
   },
   {
     title: "Portfolio Visual System",
-    type: "Identity / Personal Site",
-    description:
-      "建立一致的暗色系視覺語言，從字體、色彩、卡片層次到圖片展示都維持明確個性。",
+    type: "System",
+    description: "整理字體、色彩、按鈕與卡片層次，讓整個網站維持一致語氣。",
+  },
+  {
+    title: "Component Library Notes",
+    type: "Frontend",
+    description: "把常用區塊拆成可複用元件，方便之後持續新增頁面與模組。",
   },
 ];
 

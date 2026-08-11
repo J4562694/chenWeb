@@ -1,36 +1,5 @@
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
-const focusItems = ["Frontend Design", "UI Engineering", "Product Thinking"];
-
-const featuredProjects = [
-  {
-    title: "Brand Story Landing Page",
-    type: "Web Design / Frontend",
-    description:
-      "把產品介紹、品牌視覺與轉換流程整合成一頁式體驗，專注在節奏、層次與 CTA 的清晰度。",
-  },
-  {
-    title: "Interactive Dashboard Concept",
-    type: "Dashboard / UX",
-    description:
-      "為資料密集型後台設計可快速掃描的資訊版面，強化狀態提示、操作優先序與行動效率。",
-  },
-  {
-    title: "Portfolio Visual System",
-    type: "Identity / Personal Site",
-    description:
-      "建立一致的暗色系視覺語言，從字體、色彩、卡片層次到圖片展示都維持明確個性。",
-  },
-];
-
-const tools = [
-  "Next.js",
-  "React",
-  "TypeScript",
-  "FastAPI",
-  "Figma",
-  "GitHub Actions",
-];
+import Link from "next/link";
+import { basePath, focusItems, featuredProjects } from "@/lib/site-content";
 
 export default function HomePage() {
   return (
@@ -51,12 +20,12 @@ export default function HomePage() {
             ))}
           </div>
           <div className="hero-cta">
-            <a className="link-button" href="#projects">
+            <Link className="link-button" href="/projects">
               查看作品
-            </a>
-            <a className="ghost-link" href="#contact">
+            </Link>
+            <Link className="ghost-link" href="/contact">
               聯絡我
-            </a>
+            </Link>
           </div>
           <div className="hero-media">
             <img className="hero-image" src={`${basePath}/jerry.jpg`} alt="Portfolio visual" />
@@ -72,7 +41,7 @@ export default function HomePage() {
 
         <section className="panel-wrap panel-wrap-balanced">
           <article className="panel">
-            <h2>About Me</h2>
+            <h2>Profile</h2>
             <p>
               我喜歡把抽象的需求轉成具體的頁面體驗，尤其擅長整理內容層級、設計視覺節奏，
               並把它實作成穩定的前端頁面。
@@ -81,32 +50,30 @@ export default function HomePage() {
               無論是形象網站、作品展示，或需要兼顧品牌感與可維護性的頁面，我都希望做出既
               有記憶點又能長期使用的設計。
             </p>
+            <Link className="ghost-link" href="/about">
+              更多關於我
+            </Link>
           </article>
 
           <article className="panel">
-            <h2>Toolbox</h2>
-            <div className="tag-grid">
-              {tools.map((tool) => (
-                <span key={tool} className="tag">
-                  {tool}
-                </span>
-              ))}
-            </div>
+            <h2>Selected Work</h2>
             <p>
-              目前這個作品集本身就是以 `Next.js` 靜態輸出部署，可延伸成更多作品頁、案例頁與
-              聯絡頁。
+              目前網站已拆成多頁結構，之後可以繼續擴充真實案例、作品詳頁、履歷或文章列表。
             </p>
+            <Link className="link-button" href="/projects">
+              前往作品頁
+            </Link>
           </article>
         </section>
 
-        <section id="projects" className="panel projects-panel">
+        <section className="panel projects-panel">
           <div className="section-heading">
-            <span className="eyebrow">Selected Work</span>
-            <h2>精選作品</h2>
-            <p>這裡展示的是我偏好的作品方向：清楚敘事、精緻介面，以及能實際支撐使用情境的互動設計。</p>
+            <span className="eyebrow">Overview</span>
+            <h2>作品方向預覽</h2>
+            <p>首頁先展示作品輪廓，詳細內容則由左側 sidebar 切換到獨立頁面閱讀。</p>
           </div>
           <div className="projects-grid">
-            {featuredProjects.map((project) => (
+            {featuredProjects.slice(0, 2).map((project) => (
               <article key={project.title} className="project-card">
                 <span className="project-type">{project.type}</span>
                 <h3>{project.title}</h3>
@@ -120,22 +87,6 @@ export default function HomePage() {
           <p className="quote">
             我在意的不只是把頁面做出來，而是讓它看起來像你的作品、說得出你的風格，也能真的被使用。
           </p>
-        </section>
-
-        <section id="contact" className="panel contact-panel">
-          <div className="section-heading">
-            <span className="eyebrow">Contact</span>
-            <h2>一起做出有質感的作品</h2>
-            <p>如果你想合作製作個人網站、品牌頁面或作品集，我很樂意一起把想法整理成真正能上線的頁面。</p>
-          </div>
-          <div className="contact-actions">
-            <a className="link-button" href="mailto:hello@example.com">
-              hello@example.com
-            </a>
-            <a className="ghost-link" href="https://github.com/J4562694" target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-          </div>
         </section>
       </div>
     </main>

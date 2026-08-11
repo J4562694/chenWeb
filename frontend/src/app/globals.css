@@ -107,12 +107,12 @@ textarea {
 }
 
 .sidebar-brand {
-  padding: 22px;
-  border-radius: 24px;
-  background: rgba(14, 27, 35, 0.82);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  transition: padding 220ms ease, background 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+  padding: 8px 8px 10px;
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  transition: padding 220ms ease;
 }
 
 .sidebar-brand-header {
@@ -133,8 +133,8 @@ textarea {
 }
 
 .sidebar-brand-mark {
-  margin: 10px 0 0;
-  font-size: 1.05rem;
+  margin: 8px 0 0;
+  font-size: 0.95rem;
   letter-spacing: 0.08em;
   line-height: 1;
   color: var(--text);
@@ -142,8 +142,7 @@ textarea {
 }
 
 .sidebar-brand-name {
-  margin-top: 14px;
-  font-size: 2rem;
+  font-size: 1.55rem;
   line-height: 1;
   color: var(--text);
 }
@@ -154,9 +153,10 @@ textarea {
 }
 
 .sidebar-brand-subtitle {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  margin-top: 8px;
+  margin-left: 2px;
+  font-size: 0.82rem;
+  line-height: 1.35;
 }
 
 .sidebar-toggle {
@@ -236,11 +236,7 @@ textarea {
 }
 
 .site-sidebar-collapsed .sidebar-brand {
-  padding: 12px 10px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.02);
-  border-color: rgba(164, 210, 216, 0.08);
-  box-shadow: none;
+  padding: 4px 2px 8px;
 }
 
 .site-sidebar-collapsed .sidebar-brand-header {

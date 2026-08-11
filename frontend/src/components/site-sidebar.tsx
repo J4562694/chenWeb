@@ -16,7 +16,7 @@ export function SiteSidebar({ isCollapsed, onToggle }: SiteSidebarProps) {
     <aside className={isCollapsed ? "site-sidebar site-sidebar-collapsed" : "site-sidebar"}>
       <div className="sidebar-brand">
         <div className="sidebar-brand-header">
-          {!isCollapsed ? <span className="eyebrow">Portfolio</span> : null}
+          {!isCollapsed ? <h1 className="sidebar-brand-name">ChenWeb</h1> : null}
           <button
             type="button"
             className="sidebar-toggle"
@@ -28,12 +28,7 @@ export function SiteSidebar({ isCollapsed, onToggle }: SiteSidebarProps) {
           </button>
         </div>
         {!isCollapsed ? (
-          <>
-            <h1 className="sidebar-brand-name">ChenWeb</h1>
-            <p className="sidebar-brand-subtitle">
-              Dark mode personal portfolio with multi-page navigation.
-            </p>
-          </>
+          <p className="sidebar-brand-subtitle">Personal portfolio</p>
         ) : (
           <h1 className="sidebar-brand-mark">CW</h1>
         )}

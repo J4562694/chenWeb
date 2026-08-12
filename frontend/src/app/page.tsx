@@ -28,7 +28,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="hero-media">
-            <img className="hero-image" src={`${basePath}/jerry.jpg`} alt="Portfolio visual" />
+            <img className="hero-image" src={`${basePath}/default-v3.png`} alt="Portfolio visual" />
             <div className="hero-caption">
               <strong>用視覺建立第一印象</strong>
               <p>
